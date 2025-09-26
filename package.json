@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npx eleventy --formats=scss",
+    "serve": "npx eleventy --formats=scss --serve",
+    "debug": "DEBUG=* npx eleventy",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
