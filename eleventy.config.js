@@ -1,5 +1,3 @@
-
-
 import path from "node:path";
 import * as sass from "sass";
 
@@ -10,7 +8,7 @@ export default function (eleventyConfig) {
         // opt-out of Eleventy Layouts
         useLayouts: false,
 
-        compile: async function (inputContent, inputPath) {
+        async compile(inputContent, inputPath) {
             let parsed = path.parse(inputPath);
             // Don’t compile file names that start with an underscore
             if(parsed.name.startsWith("_")) {
