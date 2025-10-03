@@ -2,13 +2,18 @@
 layout: layout.html
 ---
 
-<h2>Content</h2>
+<div class="full-width ">
 
-{% for post in collections.post %}
-<h2> {{ post.data.title }}</h2>
+    <div class="header">
 
-<p>{{ post.content }}</p>
+    </div>
 
-<a href="{{ post.url }}">read more</a>
 
-{% endfor %}
+</div>
+<div class="max-w-6xl mx-auto p-6 grid grid-cols-1 md:grid-cols-2
+gap-6">
+
+    {% for post in collections.post %}
+    {% include '_card.html' with post=post %}
+    {% endfor %}
+</div>

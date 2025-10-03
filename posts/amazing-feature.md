@@ -1,7 +1,8 @@
 --- 
 title: "First Feature"
-category: post
+category: new category
 --- 
 
+## Amazing Feature
 
 Content for my first post.

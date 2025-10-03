@@ -3,9 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "npx  @11ty/eleventy && npx  @11ty/eleventy --formats=scss",
-    "serve": "npx  @11ty/eleventy --formats=scss --serve",
-    "debug": "DEBUG=* npx  @11ty/eleventy",
+    "build": "npx  @11ty/eleventy && npx  @11ty/eleventy n--formats=scss",
+    "serve": "npx @11ty/eleventy --formats=html,md,scss --serve",    "debug": "DEBUG=* npx  @11ty/eleventy",
     "test": "jest"
   },
   "repository": {
@@ -24,5 +23,8 @@
   "dependencies": {
     "@11ty/eleventy": "^3.1.2",
     "sass": "^1.93.2"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
   }
 }

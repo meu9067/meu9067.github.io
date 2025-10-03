@@ -1,5 +1,10 @@
-@import 'variable';
+@use 'reset';
+@use 'variable';
+@use 'fonts';
+@use 'header';
+@use 'typography';
+
 
 body {
-  background: $background;
+  background: variable.$background;
 }

@@ -1,0 +1,808 @@
+﻿2025-09-26T11:01:48.2241843Z ##[debug]Starting: build
+2025-09-26T11:01:48.2263357Z ##[debug]Cleaning runner temp folder: /home/runner/work/_temp
+2025-09-26T11:01:48.2362272Z ##[debug]Starting: Set up job
+2025-09-26T11:01:48.2363370Z Current runner version: '2.328.0'
+2025-09-26T11:01:48.2383802Z ##[group]Runner Image Provisioner
+2025-09-26T11:01:48.2384663Z Hosted Compute Agent
+2025-09-26T11:01:48.2385199Z Version: 20250912.392
+2025-09-26T11:01:48.2385795Z Commit: d921fda672a98b64f4f82364647e2f10b2267d0b
+2025-09-26T11:01:48.2386540Z Build Date: 2025-09-12T15:23:14Z
+2025-09-26T11:01:48.2387156Z ##[endgroup]
+2025-09-26T11:01:48.2387650Z ##[group]Operating System
+2025-09-26T11:01:48.2388431Z Ubuntu
+2025-09-26T11:01:48.2388925Z 24.04.3
+2025-09-26T11:01:48.2389392Z LTS
+2025-09-26T11:01:48.2389934Z ##[endgroup]
+2025-09-26T11:01:48.2390415Z ##[group]Runner Image
+2025-09-26T11:01:48.2390969Z Image: ubuntu-24.04
+2025-09-26T11:01:48.2391438Z Version: 20250922.53.1
+2025-09-26T11:01:48.2392569Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250922.53/images/ubuntu/Ubuntu2404-Readme.md
+2025-09-26T11:01:48.2394301Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250922.53
+2025-09-26T11:01:48.2395198Z ##[endgroup]
+2025-09-26T11:01:48.2396267Z ##[group]GITHUB_TOKEN Permissions
+2025-09-26T11:01:48.2398092Z Contents: read
+2025-09-26T11:01:48.2398869Z Metadata: read
+2025-09-26T11:01:48.2399392Z Pages: write
+2025-09-26T11:01:48.2399996Z ##[endgroup]
+2025-09-26T11:01:48.2402025Z Secret source: Actions
+2025-09-26T11:01:48.2402767Z ##[debug]Primary repository: meu9067/meu9067.github.io
+2025-09-26T11:01:48.2403597Z Prepare workflow directory
+2025-09-26T11:01:48.2473370Z ##[debug]Creating pipeline directory: '/home/runner/work/meu9067.github.io'
+2025-09-26T11:01:48.2476918Z ##[debug]Creating workspace directory: '/home/runner/work/meu9067.github.io/meu9067.github.io'
+2025-09-26T11:01:48.2478779Z ##[debug]Update context data
+2025-09-26T11:01:48.2482085Z ##[debug]Evaluating job-level environment variables
+2025-09-26T11:01:48.2709094Z ##[debug]Evaluating job container
+2025-09-26T11:01:48.2712725Z ##[debug]Evaluating job service containers
+2025-09-26T11:01:48.2715138Z ##[debug]Evaluating job defaults
+2025-09-26T11:01:48.2812172Z Prepare all required actions
+2025-09-26T11:01:48.2849844Z Getting action download info
+2025-09-26T11:01:48.7408894Z Download action repository 'actions/checkout@v4' (SHA:08eba0b27e820071cde6df949e0beb9ba4906955)
+2025-09-26T11:01:48.7445479Z ##[debug]Copied action archive '/opt/actionarchivecache/actions_checkout/08eba0b27e820071cde6df949e0beb9ba4906955.tar.gz' to '/home/runner/work/_actions/_temp_71a23124-5143-45ac-bfec-f878e30cbbdb/ffd3b0fb-947a-433a-8e82-b48dc086f793.tar.gz'
+2025-09-26T11:01:48.8841994Z ##[debug]Unwrap 'actions-checkout-08eba0b' to '/home/runner/work/_actions/actions/checkout/v4'
+2025-09-26T11:01:48.8967907Z ##[debug]Archive '/home/runner/work/_actions/_temp_71a23124-5143-45ac-bfec-f878e30cbbdb/ffd3b0fb-947a-433a-8e82-b48dc086f793.tar.gz' has been unzipped into '/home/runner/work/_actions/actions/checkout/v4'.
+2025-09-26T11:01:48.9065295Z Download action repository 'actions/configure-pages@v5' (SHA:983d7736d9b0ae728b81ab479565c72886d7745b)
+2025-09-26T11:01:49.7250786Z ##[debug]Download 'https://api.github.com/repos/actions/configure-pages/tarball/983d7736d9b0ae728b81ab479565c72886d7745b' to '/home/runner/work/_actions/_temp_20158243-a7b6-4e49-bf15-ba4765cdb18b/a3007ecb-72d4-4aab-a139-d067cbd95b6f.tar.gz'
+2025-09-26T11:01:49.7530098Z ##[debug]Unwrap 'actions-configure-pages-983d773' to '/home/runner/work/_actions/actions/configure-pages/v5'
+2025-09-26T11:01:49.7637487Z ##[debug]Archive '/home/runner/work/_actions/_temp_20158243-a7b6-4e49-bf15-ba4765cdb18b/a3007ecb-72d4-4aab-a139-d067cbd95b6f.tar.gz' has been unzipped into '/home/runner/work/_actions/actions/configure-pages/v5'.
+2025-09-26T11:01:49.7669520Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+2025-09-26T11:01:49.7731984Z ##[debug]Copied action archive '/opt/actionarchivecache/actions_setup-node/49933ea5288caeca8642d1e84afbd3f7d6820020.tar.gz' to '/home/runner/work/_actions/_temp_ca24c7b4-9671-49bc-845b-3b6f6295f758/f3a7de53-962f-4e19-8a6e-a9ed9c094705.tar.gz'
+2025-09-26T11:01:49.8273771Z ##[debug]Unwrap 'actions-setup-node-49933ea' to '/home/runner/work/_actions/actions/setup-node/v4'
+2025-09-26T11:01:49.8522898Z ##[debug]Archive '/home/runner/work/_actions/_temp_ca24c7b4-9671-49bc-845b-3b6f6295f758/f3a7de53-962f-4e19-8a6e-a9ed9c094705.tar.gz' has been unzipped into '/home/runner/work/_actions/actions/setup-node/v4'.
+2025-09-26T11:01:49.8579857Z Download action repository 'actions/upload-pages-artifact@v3' (SHA:56afc609e74202658d3ffba0e8f6dda462b719fa)
+2025-09-26T11:01:50.3635446Z ##[debug]Download 'https://api.github.com/repos/actions/upload-pages-artifact/tarball/56afc609e74202658d3ffba0e8f6dda462b719fa' to '/home/runner/work/_actions/_temp_e3117354-c294-4cdc-a20c-9595c0dae9ab/f48edf60-274d-414f-8ba4-5c2d8997de82.tar.gz'
+2025-09-26T11:01:50.3719025Z ##[debug]Unwrap 'actions-upload-pages-artifact-56afc60' to '/home/runner/work/_actions/actions/upload-pages-artifact/v3'
+2025-09-26T11:01:50.3738026Z ##[debug]Archive '/home/runner/work/_actions/_temp_e3117354-c294-4cdc-a20c-9595c0dae9ab/f48edf60-274d-414f-8ba4-5c2d8997de82.tar.gz' has been unzipped into '/home/runner/work/_actions/actions/upload-pages-artifact/v3'.
+2025-09-26T11:01:50.3766090Z ##[debug]action.yml for action: '/home/runner/work/_actions/actions/checkout/v4/action.yml'.
+2025-09-26T11:01:50.4487233Z ##[debug]action.yml for action: '/home/runner/work/_actions/actions/configure-pages/v5/action.yml'.
+2025-09-26T11:01:50.4549442Z ##[debug]action.yml for action: '/home/runner/work/_actions/actions/setup-node/v4/action.yml'.
+2025-09-26T11:01:50.4642433Z ##[debug]action.yml for action: '/home/runner/work/_actions/actions/upload-pages-artifact/v3/action.yml'.
+2025-09-26T11:01:50.4793460Z Getting action download info
+2025-09-26T11:01:50.6430663Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2025-09-26T11:01:50.6509926Z ##[debug]Copied action archive '/opt/actionarchivecache/actions_upload-artifact/ea165f8d65b6e75b540449e92b4886f43607fa02.tar.gz' to '/home/runner/work/_actions/_temp_62d2dacf-356c-4378-a09f-916e8af7bca0/97117e8f-5688-4fa9-9963-26f698273b56.tar.gz'
+2025-09-26T11:01:50.7182943Z ##[debug]Unwrap 'actions-upload-artifact-ea165f8' to '/home/runner/work/_actions/actions/upload-artifact/v4'
+2025-09-26T11:01:50.7483442Z ##[debug]Archive '/home/runner/work/_actions/_temp_62d2dacf-356c-4378-a09f-916e8af7bca0/97117e8f-5688-4fa9-9963-26f698273b56.tar.gz' has been unzipped into '/home/runner/work/_actions/actions/upload-artifact/v4'.
+2025-09-26T11:01:50.7553706Z ##[debug]action.yml for action: '/home/runner/work/_actions/actions/upload-artifact/v4/action.yml'.
+2025-09-26T11:01:50.7776331Z ##[debug]Set step '__actions_checkout' display name to: 'Checkout'
+2025-09-26T11:01:50.7780480Z ##[debug]Set step 'pages' display name to: 'Setup Pages'
+2025-09-26T11:01:50.7783527Z ##[debug]Set step '__actions_setup-node' display name to: 'Install Node.js'
+2025-09-26T11:01:50.7786464Z ##[debug]Set step '__run' display name to: 'Install dependencies'
+2025-09-26T11:01:50.7789492Z ##[debug]Set step '__run_2' display name to: 'Build with Eleventy'
+2025-09-26T11:01:50.7792629Z ##[debug]Set step '__actions_upload-pages-artifact' display name to: 'Upload artifact'
+2025-09-26T11:01:50.7794250Z Complete job name: build
+2025-09-26T11:01:50.7843603Z ##[debug]Collect running processes for tracking orphan processes.
+2025-09-26T11:01:50.8057628Z ##[debug]Finishing: Set up job
+2025-09-26T11:01:50.8184855Z ##[debug]Evaluating condition for step: 'Checkout'
+2025-09-26T11:01:50.8221796Z ##[debug]Evaluating: success()
+2025-09-26T11:01:50.8227148Z ##[debug]Evaluating success:
+2025-09-26T11:01:50.8244481Z ##[debug]=> true
+2025-09-26T11:01:50.8252417Z ##[debug]Result: true
+2025-09-26T11:01:50.8275944Z ##[debug]Starting: Checkout
+2025-09-26T11:01:50.8366588Z ##[debug]Register post job cleanup for action: actions/checkout@v4
+2025-09-26T11:01:50.8454173Z ##[debug]Loading inputs
+2025-09-26T11:01:50.8466999Z ##[debug]Evaluating: github.repository
+2025-09-26T11:01:50.8468991Z ##[debug]Evaluating Index:
+2025-09-26T11:01:50.8471635Z ##[debug]..Evaluating github:
+2025-09-26T11:01:50.8473375Z ##[debug]..=> Object
+2025-09-26T11:01:50.8479446Z ##[debug]..Evaluating String:
+2025-09-26T11:01:50.8480790Z ##[debug]..=> 'repository'
+2025-09-26T11:01:50.8485450Z ##[debug]=> 'meu9067/meu9067.github.io'
+2025-09-26T11:01:50.8487504Z ##[debug]Result: 'meu9067/meu9067.github.io'
+2025-09-26T11:01:50.8492152Z ##[debug]Evaluating: github.token
+2025-09-26T11:01:50.8493168Z ##[debug]Evaluating Index:
+2025-09-26T11:01:50.8494061Z ##[debug]..Evaluating github:
+2025-09-26T11:01:50.8494978Z ##[debug]..=> Object
+2025-09-26T11:01:50.8495796Z ##[debug]..Evaluating String:
+2025-09-26T11:01:50.8496715Z ##[debug]..=> 'token'
+2025-09-26T11:01:50.8498510Z ##[debug]=> '***'
+2025-09-26T11:01:50.8499608Z ##[debug]Result: '***'
+2025-09-26T11:01:50.8522278Z ##[debug]Loading env
+2025-09-26T11:01:50.8603237Z ##[group]Run actions/checkout@v4
+2025-09-26T11:01:50.8604363Z with:
+2025-09-26T11:01:50.8605090Z   submodules: recursive
+2025-09-26T11:01:50.8605951Z   repository: meu9067/meu9067.github.io
+2025-09-26T11:01:50.8607177Z   token: ***
+2025-09-26T11:01:50.8607905Z   ssh-strict: true
+2025-09-26T11:01:50.8608907Z   ssh-user: git
+2025-09-26T11:01:50.8609706Z   persist-credentials: true
+2025-09-26T11:01:50.8610550Z   clean: true
+2025-09-26T11:01:50.8611337Z   sparse-checkout-cone-mode: true
+2025-09-26T11:01:50.8612267Z   fetch-depth: 1
+2025-09-26T11:01:50.8613042Z   fetch-tags: false
+2025-09-26T11:01:50.8613810Z   show-progress: true
+2025-09-26T11:01:50.8614595Z   lfs: false
+2025-09-26T11:01:50.8615335Z   set-safe-directory: true
+2025-09-26T11:01:50.8616454Z ##[endgroup]
+2025-09-26T11:01:50.9600895Z ##[debug]GITHUB_WORKSPACE = '/home/runner/work/meu9067.github.io/meu9067.github.io'
+2025-09-26T11:01:50.9603815Z ##[debug]qualified repository = 'meu9067/meu9067.github.io'
+2025-09-26T11:01:50.9606234Z ##[debug]ref = 'refs/heads/main'
+2025-09-26T11:01:50.9607915Z ##[debug]commit = '62f84b11628b5e7b9f1e192ca34851cdc64f3f5f'
+2025-09-26T11:01:50.9610064Z ##[debug]clean = true
+2025-09-26T11:01:50.9611366Z ##[debug]filter = undefined
+2025-09-26T11:01:50.9612708Z ##[debug]fetch depth = 1
+2025-09-26T11:01:50.9614040Z ##[debug]fetch tags = false
+2025-09-26T11:01:50.9615395Z ##[debug]show progress = true
+2025-09-26T11:01:50.9616747Z ##[debug]lfs = false
+2025-09-26T11:01:50.9618007Z ##[debug]submodules = true
+2025-09-26T11:01:50.9619598Z ##[debug]recursive submodules = true
+2025-09-26T11:01:50.9621055Z ##[debug]GitHub Host URL = 
+2025-09-26T11:01:50.9623560Z ::add-matcher::/home/runner/work/_actions/actions/checkout/v4/dist/problem-matcher.json
+2025-09-26T11:01:50.9701662Z ##[debug]Added matchers: 'checkout-git'. Problem matchers scan action output for known warning or error strings and report these inline.
+2025-09-26T11:01:50.9707494Z Syncing repository: meu9067/meu9067.github.io
+2025-09-26T11:01:50.9709857Z ::group::Getting Git version info
+2025-09-26T11:01:50.9711559Z ##[group]Getting Git version info
+2025-09-26T11:01:50.9712954Z Working directory is '/home/runner/work/meu9067.github.io/meu9067.github.io'
+2025-09-26T11:01:50.9715032Z ##[debug]Getting git version
+2025-09-26T11:01:50.9715978Z [command]/usr/bin/git version
+2025-09-26T11:01:50.9804324Z git version 2.51.0
+2025-09-26T11:01:50.9827552Z ##[debug]0
+2025-09-26T11:01:50.9829237Z ##[debug]git version 2.51.0
+2025-09-26T11:01:50.9830518Z ##[debug]
+2025-09-26T11:01:50.9832751Z ##[debug]Set git useragent to: git/2.51.0 (github-actions-checkout)
+2025-09-26T11:01:50.9834611Z ::endgroup::
+2025-09-26T11:01:50.9835362Z ##[endgroup]
+2025-09-26T11:01:50.9839356Z ::add-mask::***
+2025-09-26T11:01:50.9844887Z Temporarily overriding HOME='/home/runner/work/_temp/a6dea2c4-7d21-445d-bee8-1cb6fec8f04a' before making global git config changes
+2025-09-26T11:01:50.9856539Z Adding repository directory to the temporary git global config as a safe directory
+2025-09-26T11:01:50.9859284Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/meu9067.github.io/meu9067.github.io
+2025-09-26T11:01:50.9889033Z ##[debug]0
+2025-09-26T11:01:50.9890247Z ##[debug]
+2025-09-26T11:01:50.9894072Z Deleting the contents of '/home/runner/work/meu9067.github.io/meu9067.github.io'
+2025-09-26T11:01:50.9897404Z ::group::Initializing the repository
+2025-09-26T11:01:50.9898660Z ##[group]Initializing the repository
+2025-09-26T11:01:50.9901656Z [command]/usr/bin/git init /home/runner/work/meu9067.github.io/meu9067.github.io
+2025-09-26T11:01:51.0140835Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-09-26T11:01:51.0143134Z hint: is subject to change. To configure the initial branch name to use in all
+2025-09-26T11:01:51.0145564Z hint: of your new repositories, which will suppress this warning, call:
+2025-09-26T11:01:51.0147774Z hint:
+2025-09-26T11:01:51.0149493Z hint: 	git config --global init.defaultBranch <name>
+2025-09-26T11:01:51.0151412Z hint:
+2025-09-26T11:01:51.0153211Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-09-26T11:01:51.0156121Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-09-26T11:01:51.0158701Z hint:
+2025-09-26T11:01:51.0159978Z hint: 	git branch -m <name>
+2025-09-26T11:01:51.0161367Z hint:
+2025-09-26T11:01:51.0163217Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2025-09-26T11:01:51.0165944Z Initialized empty Git repository in /home/runner/work/meu9067.github.io/meu9067.github.io/.git/
+2025-09-26T11:01:51.0168075Z ##[debug]0
+2025-09-26T11:01:51.0170762Z ##[debug]Initialized empty Git repository in /home/runner/work/meu9067.github.io/meu9067.github.io/.git/
+2025-09-26T11:01:51.0173660Z ##[debug]
+2025-09-26T11:01:51.0175170Z [command]/usr/bin/git remote add origin https://github.com/meu9067/meu9067.github.io
+2025-09-26T11:01:51.0198565Z ##[debug]0
+2025-09-26T11:01:51.0200648Z ##[debug]
+2025-09-26T11:01:51.0202827Z ::endgroup::
+2025-09-26T11:01:51.0204047Z ##[endgroup]
+2025-09-26T11:01:51.0206306Z ::group::Disabling automatic garbage collection
+2025-09-26T11:01:51.0208182Z ##[group]Disabling automatic garbage collection
+2025-09-26T11:01:51.0210299Z [command]/usr/bin/git config --local gc.auto 0
+2025-09-26T11:01:51.0232964Z ##[debug]0
+2025-09-26T11:01:51.0235022Z ##[debug]
+2025-09-26T11:01:51.0237046Z ::endgroup::
+2025-09-26T11:01:51.0238203Z ##[endgroup]
+2025-09-26T11:01:51.0240638Z ::group::Setting up auth
+2025-09-26T11:01:51.0242098Z ##[group]Setting up auth
+2025-09-26T11:01:51.0244339Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-09-26T11:01:51.0267829Z ##[debug]1
+2025-09-26T11:01:51.0270058Z ##[debug]
+2025-09-26T11:01:51.0276292Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-09-26T11:01:51.0662949Z ##[debug]0
+2025-09-26T11:01:51.0664200Z ##[debug]
+2025-09-26T11:01:51.0668655Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-09-26T11:01:51.0693587Z ##[debug]1
+2025-09-26T11:01:51.0697351Z ##[debug]
+2025-09-26T11:01:51.0700284Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-09-26T11:01:51.0912371Z ##[debug]0
+2025-09-26T11:01:51.0913627Z ##[debug]
+2025-09-26T11:01:51.0921779Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-09-26T11:01:51.0955881Z ##[debug]0
+2025-09-26T11:01:51.0957386Z ##[debug]
+2025-09-26T11:01:51.0964010Z ::endgroup::
+2025-09-26T11:01:51.0964731Z ##[endgroup]
+2025-09-26T11:01:51.0972891Z ::group::Fetching the repository
+2025-09-26T11:01:51.0974463Z ##[group]Fetching the repository
+2025-09-26T11:01:51.0978870Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +62f84b11628b5e7b9f1e192ca34851cdc64f3f5f:refs/remotes/origin/main
+2025-09-26T11:01:51.5390503Z From https://github.com/meu9067/meu9067.github.io
+2025-09-26T11:01:51.5394648Z  * [new ref]         62f84b11628b5e7b9f1e192ca34851cdc64f3f5f -> origin/main
+2025-09-26T11:01:51.5424881Z ##[debug]0
+2025-09-26T11:01:51.5425694Z ##[debug]
+2025-09-26T11:01:51.5431563Z ::endgroup::
+2025-09-26T11:01:51.5431976Z ##[endgroup]
+2025-09-26T11:01:51.5432860Z ::group::Determining the checkout info
+2025-09-26T11:01:51.5433507Z ##[group]Determining the checkout info
+2025-09-26T11:01:51.5434551Z ::endgroup::
+2025-09-26T11:01:51.5434954Z ##[endgroup]
+2025-09-26T11:01:51.5436486Z [command]/usr/bin/git sparse-checkout disable
+2025-09-26T11:01:51.5480231Z ##[debug]0
+2025-09-26T11:01:51.5480649Z ##[debug]
+2025-09-26T11:01:51.5484458Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2025-09-26T11:01:51.5512128Z ##[debug]0
+2025-09-26T11:01:51.5512903Z ##[debug]
+2025-09-26T11:01:51.5513562Z ::group::Checking out the ref
+2025-09-26T11:01:51.5514121Z ##[group]Checking out the ref
+2025-09-26T11:01:51.5517548Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2025-09-26T11:01:51.5574926Z Switched to a new branch 'main'
+2025-09-26T11:01:51.5577625Z branch 'main' set up to track 'origin/main'.
+2025-09-26T11:01:51.5582609Z ##[debug]0
+2025-09-26T11:01:51.5583321Z ##[debug]branch 'main' set up to track 'origin/main'.
+2025-09-26T11:01:51.5583656Z ##[debug]
+2025-09-26T11:01:51.5584067Z ::endgroup::
+2025-09-26T11:01:51.5584289Z ##[endgroup]
+2025-09-26T11:01:51.5584713Z ::group::Setting up auth for fetching submodules
+2025-09-26T11:01:51.5585058Z ##[group]Setting up auth for fetching submodules
+2025-09-26T11:01:51.5587706Z [command]/usr/bin/git config --global http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-09-26T11:01:51.5613586Z ##[debug]0
+2025-09-26T11:01:51.5614147Z ##[debug]
+2025-09-26T11:01:51.5622960Z [command]/usr/bin/git config --global --unset-all url.https://github.com/.insteadOf
+2025-09-26T11:01:51.5646343Z ##[debug]5
+2025-09-26T11:01:51.5646922Z ##[debug]
+2025-09-26T11:01:51.5650046Z [command]/usr/bin/git config --global --add url.https://github.com/.insteadOf git@github.com:
+2025-09-26T11:01:51.5673961Z ##[debug]0
+2025-09-26T11:01:51.5674538Z ##[debug]
+2025-09-26T11:01:51.5678089Z [command]/usr/bin/git config --global --add url.https://github.com/.insteadOf org-145114439@github.com:
+2025-09-26T11:01:51.5701767Z ##[debug]0
+2025-09-26T11:01:51.5702343Z ##[debug]
+2025-09-26T11:01:51.5702730Z ::endgroup::
+2025-09-26T11:01:51.5702952Z ##[endgroup]
+2025-09-26T11:01:51.5706294Z ::group::Fetching submodules
+2025-09-26T11:01:51.5706760Z ##[group]Fetching submodules
+2025-09-26T11:01:51.5707179Z [command]/usr/bin/git submodule sync --recursive
+2025-09-26T11:01:51.5921870Z ##[debug]0
+2025-09-26T11:01:51.5926362Z ##[debug]
+2025-09-26T11:01:51.5927018Z [command]/usr/bin/git -c protocol.version=2 submodule update --init --force --depth=1 --recursive
+2025-09-26T11:01:51.6142027Z ##[debug]0
+2025-09-26T11:01:51.6142565Z ##[debug]
+2025-09-26T11:01:51.6145718Z [command]/usr/bin/git submodule foreach --recursive git config --local gc.auto 0
+2025-09-26T11:01:51.6376773Z ##[debug]0
+2025-09-26T11:01:51.6377354Z ##[debug]
+2025-09-26T11:01:51.6377768Z ::endgroup::
+2025-09-26T11:01:51.6377991Z ##[endgroup]
+2025-09-26T11:01:51.6378646Z ::group::Persisting credentials for submodules
+2025-09-26T11:01:51.6379016Z ##[group]Persisting credentials for submodules
+2025-09-26T11:01:51.6383937Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'url\.https\:\/\/github\.com\/\.insteadOf' && git config --local --unset-all 'url.https://github.com/.insteadOf' || :"
+2025-09-26T11:01:51.6596301Z ##[debug]0
+2025-09-26T11:01:51.6596849Z ##[debug]
+2025-09-26T11:01:51.6601130Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local 'http.https://github.com/.extraheader' 'AUTHORIZATION: basic ***' && git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2025-09-26T11:01:51.6812953Z ##[debug]0
+2025-09-26T11:01:51.6813388Z ##[debug]
+2025-09-26T11:01:51.6819015Z [command]/usr/bin/git submodule foreach --recursive git config --local --add 'url.https://github.com/.insteadOf' 'git@github.com:'
+2025-09-26T11:01:51.7034130Z ##[debug]0
+2025-09-26T11:01:51.7034870Z ##[debug]
+2025-09-26T11:01:51.7039728Z [command]/usr/bin/git submodule foreach --recursive git config --local --add 'url.https://github.com/.insteadOf' 'org-145114439@github.com:'
+2025-09-26T11:01:51.7254148Z ##[debug]0
+2025-09-26T11:01:51.7254978Z ##[debug]
+2025-09-26T11:01:51.7255781Z ::endgroup::
+2025-09-26T11:01:51.7256170Z ##[endgroup]
+2025-09-26T11:01:51.7292006Z ##[debug]0
+2025-09-26T11:01:51.7292910Z ##[debug]commit 62f84b11628b5e7b9f1e192ca34851cdc64f3f5f
+2025-09-26T11:01:51.7293676Z ##[debug]Author: Miguel Esquirol <miguel.esquirol@springernature.com>
+2025-09-26T11:01:51.7294436Z ##[debug]Date:   Fri Sep 26 11:41:26 2025 +0100
+2025-09-26T11:01:51.7294949Z ##[debug]
+2025-09-26T11:01:51.7295351Z ##[debug]    Deploy action
+2025-09-26T11:01:51.7295805Z ##[debug]
+2025-09-26T11:01:51.7296388Z [command]/usr/bin/git log -1 --format=%H
+2025-09-26T11:01:51.7322168Z 62f84b11628b5e7b9f1e192ca34851cdc64f3f5f
+2025-09-26T11:01:51.7326582Z ##[debug]0
+2025-09-26T11:01:51.7327382Z ##[debug]62f84b11628b5e7b9f1e192ca34851cdc64f3f5f
+2025-09-26T11:01:51.7327909Z ##[debug]
+2025-09-26T11:01:51.7333832Z ##[debug]Unsetting HOME override
+2025-09-26T11:01:51.7344124Z ::remove-matcher owner=checkout-git::
+2025-09-26T11:01:51.7359570Z ##[debug]Removed matchers: 'checkout-git'
+2025-09-26T11:01:51.7414991Z ##[debug]Node Action run completed with exit code 0
+2025-09-26T11:01:51.7447924Z ##[debug]Save intra-action state isPost = true
+2025-09-26T11:01:51.7449069Z ##[debug]Save intra-action state setSafeDirectory = true
+2025-09-26T11:01:51.7449664Z ##[debug]Save intra-action state repositoryPath = /home/runner/work/meu9067.github.io/meu9067.github.io
+2025-09-26T11:01:51.7453615Z ##[debug]Set output commit = 62f84b11628b5e7b9f1e192ca34851cdc64f3f5f
+2025-09-26T11:01:51.7454138Z ##[debug]Set output ref = refs/heads/main
+2025-09-26T11:01:51.7459369Z ##[debug]Finishing: Checkout
+2025-09-26T11:01:51.7471268Z ##[debug]Evaluating condition for step: 'Setup Pages'
+2025-09-26T11:01:51.7473537Z ##[debug]Evaluating: success()
+2025-09-26T11:01:51.7473976Z ##[debug]Evaluating success:
+2025-09-26T11:01:51.7474490Z ##[debug]=> true
+2025-09-26T11:01:51.7474891Z ##[debug]Result: true
+2025-09-26T11:01:51.7475655Z ##[debug]Starting: Setup Pages
+2025-09-26T11:01:51.7502779Z ##[debug]Loading inputs
+2025-09-26T11:01:51.7504863Z ##[debug]Evaluating: github.token
+2025-09-26T11:01:51.7505240Z ##[debug]Evaluating Index:
+2025-09-26T11:01:51.7505536Z ##[debug]..Evaluating github:
+2025-09-26T11:01:51.7505841Z ##[debug]..=> Object
+2025-09-26T11:01:51.7506126Z ##[debug]..Evaluating String:
+2025-09-26T11:01:51.7506420Z ##[debug]..=> 'token'
+2025-09-26T11:01:51.7507010Z ##[debug]=> '***'
+2025-09-26T11:01:51.7507414Z ##[debug]Result: '***'
+2025-09-26T11:01:51.7509730Z ##[debug]Loading env
+2025-09-26T11:01:51.7515042Z ##[group]Run actions/configure-pages@v5
+2025-09-26T11:01:51.7515348Z with:
+2025-09-26T11:01:51.7515741Z   token: ***
+2025-09-26T11:01:51.7515976Z   enablement: false
+2025-09-26T11:01:51.7516219Z ##[endgroup]
+2025-09-26T11:01:51.8412850Z ##[debug]all variables are set
+2025-09-26T11:01:52.2232519Z ##[debug]Node Action run completed with exit code 0
+2025-09-26T11:01:52.2239922Z ##[debug]GITHUB_PAGES='true'
+2025-09-26T11:01:52.2255107Z ##[debug]Set output base_url = https://meu9067.github.io
+2025-09-26T11:01:52.2255634Z ##[debug]Set output origin = https://meu9067.github.io
+2025-09-26T11:01:52.2256010Z ##[debug]Set output host = meu9067.github.io
+2025-09-26T11:01:52.2256361Z ##[debug]Set output base_path = 
+2025-09-26T11:01:52.2257308Z ##[debug]Finishing: Setup Pages
+2025-09-26T11:01:52.2268919Z ##[debug]Evaluating condition for step: 'Install Node.js'
+2025-09-26T11:01:52.2271629Z ##[debug]Evaluating: success()
+2025-09-26T11:01:52.2272034Z ##[debug]Evaluating success:
+2025-09-26T11:01:52.2272476Z ##[debug]=> true
+2025-09-26T11:01:52.2272935Z ##[debug]Result: true
+2025-09-26T11:01:52.2273605Z ##[debug]Starting: Install Node.js
+2025-09-26T11:01:52.2300423Z ##[debug]Register post job cleanup for action: actions/setup-node@v4
+2025-09-26T11:01:52.2314468Z ##[debug]Loading inputs
+2025-09-26T11:01:52.2324420Z ##[debug]Evaluating: (((github.server_url == 'https://github.com') && github.token) || '')
+2025-09-26T11:01:52.2324978Z ##[debug]Evaluating Or:
+2025-09-26T11:01:52.2327141Z ##[debug]..Evaluating And:
+2025-09-26T11:01:52.2329344Z ##[debug]....Evaluating Equal:
+2025-09-26T11:01:52.2330467Z ##[debug]......Evaluating Index:
+2025-09-26T11:01:52.2330789Z ##[debug]........Evaluating github:
+2025-09-26T11:01:52.2331123Z ##[debug]........=> Object
+2025-09-26T11:01:52.2331474Z ##[debug]........Evaluating String:
+2025-09-26T11:01:52.2331774Z ##[debug]........=> 'server_url'
+2025-09-26T11:01:52.2332142Z ##[debug]......=> 'https://github.com'
+2025-09-26T11:01:52.2332469Z ##[debug]......Evaluating String:
+2025-09-26T11:01:52.2332784Z ##[debug]......=> 'https://github.com'
+2025-09-26T11:01:52.2335832Z ##[debug]....=> true
+2025-09-26T11:01:52.2336334Z ##[debug]....Evaluating Index:
+2025-09-26T11:01:52.2336640Z ##[debug]......Evaluating github:
+2025-09-26T11:01:52.2336938Z ##[debug]......=> Object
+2025-09-26T11:01:52.2337225Z ##[debug]......Evaluating String:
+2025-09-26T11:01:52.2337513Z ##[debug]......=> 'token'
+2025-09-26T11:01:52.2338038Z ##[debug]....=> '***'
+2025-09-26T11:01:52.2338742Z ##[debug]..=> '***'
+2025-09-26T11:01:52.2339416Z ##[debug]=> '***'
+2025-09-26T11:01:52.2343987Z ##[debug]Expanded: ((('https://github.com' == 'https://github.com') && '***') || '')
+2025-09-26T11:01:52.2344567Z ##[debug]Result: '***'
+2025-09-26T11:01:52.2347367Z ##[debug]Loading env
+2025-09-26T11:01:52.2353124Z ##[group]Run actions/setup-node@v4
+2025-09-26T11:01:52.2353458Z with:
+2025-09-26T11:01:52.2353682Z   node-version: 20
+2025-09-26T11:01:52.2353910Z   always-auth: false
+2025-09-26T11:01:52.2354153Z   check-latest: false
+2025-09-26T11:01:52.2354534Z   token: ***
+2025-09-26T11:01:52.2354756Z env:
+2025-09-26T11:01:52.2354960Z   GITHUB_PAGES: true
+2025-09-26T11:01:52.2355200Z ##[endgroup]
+2025-09-26T11:01:52.4018696Z ##[debug]isExplicit: 
+2025-09-26T11:01:52.4020033Z ##[debug]explicit? false
+2025-09-26T11:01:52.4040924Z ##[debug]isExplicit: 18.20.8
+2025-09-26T11:01:52.4041747Z ##[debug]explicit? true
+2025-09-26T11:01:52.4060023Z ##[debug]isExplicit: 20.19.5
+2025-09-26T11:01:52.4060574Z ##[debug]explicit? true
+2025-09-26T11:01:52.4070965Z ##[debug]isExplicit: 22.19.0
+2025-09-26T11:01:52.4071507Z ##[debug]explicit? true
+2025-09-26T11:01:52.4080830Z ##[debug]evaluating 3 versions
+2025-09-26T11:01:52.4104493Z ##[debug]matched: 20.19.5
+2025-09-26T11:01:52.4105635Z ##[debug]checking cache: /opt/hostedtoolcache/node/20.19.5/x64
+2025-09-26T11:01:52.4106741Z ##[debug]Found tool in cache node 20.19.5 x64
+2025-09-26T11:01:52.4107473Z Found in cache @ /opt/hostedtoolcache/node/20.19.5/x64
+2025-09-26T11:01:52.4113253Z ::group::Environment details
+2025-09-26T11:01:52.4113808Z ##[group]Environment details
+2025-09-26T11:01:54.9002780Z node: v20.19.5
+2025-09-26T11:01:54.9003155Z npm: 10.8.2
+2025-09-26T11:01:54.9003398Z yarn: 1.22.22
+2025-09-26T11:01:54.9004568Z ::endgroup::
+2025-09-26T11:01:54.9004892Z ##[endgroup]
+2025-09-26T11:01:54.9012125Z ##[add-matcher]/home/runner/work/_actions/actions/setup-node/v4/.github/tsc.json
+2025-09-26T11:01:54.9032622Z ##[debug]Added matchers: 'tsc'. Problem matchers scan action output for known warning or error strings and report these inline.
+2025-09-26T11:01:54.9033537Z ##[add-matcher]/home/runner/work/_actions/actions/setup-node/v4/.github/eslint-stylish.json
+2025-09-26T11:01:54.9041356Z ##[debug]Added matchers: 'eslint-stylish'. Problem matchers scan action output for known warning or error strings and report these inline.
+2025-09-26T11:01:54.9042300Z ##[add-matcher]/home/runner/work/_actions/actions/setup-node/v4/.github/eslint-compact.json
+2025-09-26T11:01:54.9045232Z ##[debug]Added matchers: 'eslint-compact'. Problem matchers scan action output for known warning or error strings and report these inline.
+2025-09-26T11:01:54.9064750Z ##[debug]Node Action run completed with exit code 0
+2025-09-26T11:01:54.9067407Z ##[debug]Set output node-version = v20.19.5
+2025-09-26T11:01:54.9067899Z ##[debug]Finishing: Install Node.js
+2025-09-26T11:01:54.9074878Z ##[debug]Evaluating condition for step: 'Install dependencies'
+2025-09-26T11:01:54.9077025Z ##[debug]Evaluating: success()
+2025-09-26T11:01:54.9077386Z ##[debug]Evaluating success:
+2025-09-26T11:01:54.9077784Z ##[debug]=> true
+2025-09-26T11:01:54.9078109Z ##[debug]Result: true
+2025-09-26T11:01:54.9078988Z ##[debug]Starting: Install dependencies
+2025-09-26T11:01:54.9087109Z ##[debug]Loading inputs
+2025-09-26T11:01:54.9088091Z ##[debug]Loading env
+2025-09-26T11:01:54.9103287Z ##[group]Run npm ci
+2025-09-26T11:01:54.9103561Z [36;1mnpm ci[0m
+2025-09-26T11:01:54.9222414Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2025-09-26T11:01:54.9222753Z env:
+2025-09-26T11:01:54.9222947Z   GITHUB_PAGES: true
+2025-09-26T11:01:54.9223137Z ##[endgroup]
+2025-09-26T11:01:54.9240942Z ##[debug]Overwrite 'shell' base on job defaults.
+2025-09-26T11:01:54.9276664Z ##[debug]/usr/bin/bash --noprofile --norc -e -o pipefail /home/runner/work/_temp/388ce8e4-b03e-4c7a-b03b-7905a60817c5.sh
+2025-09-26T11:02:00.3191406Z 
+2025-09-26T11:02:00.3200569Z added 146 packages, and audited 147 packages in 5s
+2025-09-26T11:02:00.3201139Z 
+2025-09-26T11:02:00.3201482Z 35 packages are looking for funding
+2025-09-26T11:02:00.3202004Z   run `npm fund` for details
+2025-09-26T11:02:00.3204997Z 
+2025-09-26T11:02:00.3205323Z found 0 vulnerabilities
+2025-09-26T11:02:00.3354735Z ##[debug]Finishing: Install dependencies
+2025-09-26T11:02:00.3362391Z ##[debug]Evaluating condition for step: 'Build with Eleventy'
+2025-09-26T11:02:00.3363955Z ##[debug]Evaluating: success()
+2025-09-26T11:02:00.3364331Z ##[debug]Evaluating success:
+2025-09-26T11:02:00.3364709Z ##[debug]=> true
+2025-09-26T11:02:00.3365022Z ##[debug]Result: true
+2025-09-26T11:02:00.3365515Z ##[debug]Starting: Build with Eleventy
+2025-09-26T11:02:00.3372710Z ##[debug]Loading inputs
+2025-09-26T11:02:00.3373641Z ##[debug]Loading env
+2025-09-26T11:02:00.3377340Z ##[group]Run npm run build
+2025-09-26T11:02:00.3377568Z [36;1mnpm run build[0m
+2025-09-26T11:02:00.3409667Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2025-09-26T11:02:00.3409980Z env:
+2025-09-26T11:02:00.3410141Z   GITHUB_PAGES: true
+2025-09-26T11:02:00.3410333Z ##[endgroup]
+2025-09-26T11:02:00.3411469Z ##[debug]Overwrite 'shell' base on job defaults.
+2025-09-26T11:02:00.3443539Z ##[debug]/usr/bin/bash --noprofile --norc -e -o pipefail /home/runner/work/_temp/75f1b77d-319d-49a7-a969-60b076a8b555.sh
+2025-09-26T11:02:00.4563471Z 
+2025-09-26T11:02:00.4564022Z > amazing-nature@1.0.0 build
+2025-09-26T11:02:00.4564664Z > npx  @11ty/eleventy --formats=scss
+2025-09-26T11:02:00.4564942Z 
+2025-09-26T11:02:01.4739100Z DEPRECATION WARNING [import]: Sass @import rules are deprecated and will be removed in Dart Sass 3.0.0.
+2025-09-26T11:02:01.4739850Z 
+2025-09-26T11:02:01.4740307Z More info and automated migrator: https://sass-lang.com/d/import
+2025-09-26T11:02:01.4740741Z 
+2025-09-26T11:02:01.4741088Z   ╷
+2025-09-26T11:02:01.4741476Z 1 │ @import 'variable';
+2025-09-26T11:02:01.4741934Z   │         ^^^^^^^^^^
+2025-09-26T11:02:01.4742261Z   ╵
+2025-09-26T11:02:01.4742580Z     - 1:9  root stylesheet
+2025-09-26T11:02:01.4742848Z 
+2025-09-26T11:02:01.4882093Z [11ty] Writing ./_site/styles/main.css from ./styles/main.scss
+2025-09-26T11:02:01.4897298Z [11ty] Wrote 1 file in 0.28 seconds (v3.1.2)
+2025-09-26T11:02:01.5173218Z ##[debug]Finishing: Build with Eleventy
+2025-09-26T11:02:01.5183597Z ##[debug]Evaluating condition for step: 'Upload artifact'
+2025-09-26T11:02:01.5185650Z ##[debug]Evaluating: success()
+2025-09-26T11:02:01.5186238Z ##[debug]Evaluating success:
+2025-09-26T11:02:01.5187092Z ##[debug]=> true
+2025-09-26T11:02:01.5187629Z ##[debug]Result: true
+2025-09-26T11:02:01.5188623Z ##[debug]Starting: Upload artifact
+2025-09-26T11:02:01.5260315Z ##[debug]Loading inputs
+2025-09-26T11:02:01.5262320Z ##[debug]Loading env
+2025-09-26T11:02:01.5269620Z ##[group]Run actions/upload-pages-artifact@v3
+2025-09-26T11:02:01.5269899Z with:
+2025-09-26T11:02:01.5270063Z   path: ./_site
+2025-09-26T11:02:01.5270261Z   name: github-pages
+2025-09-26T11:02:01.5270458Z   retention-days: 1
+2025-09-26T11:02:01.5270629Z env:
+2025-09-26T11:02:01.5270782Z   GITHUB_PAGES: true
+2025-09-26T11:02:01.5270964Z ##[endgroup]
+2025-09-26T11:02:01.5318956Z ##[debug]Evaluating: inputs.path
+2025-09-26T11:02:01.5319247Z ##[debug]Evaluating Index:
+2025-09-26T11:02:01.5319519Z ##[debug]..Evaluating inputs:
+2025-09-26T11:02:01.5319771Z ##[debug]..=> Object
+2025-09-26T11:02:01.5319993Z ##[debug]..Evaluating String:
+2025-09-26T11:02:01.5320234Z ##[debug]..=> 'path'
+2025-09-26T11:02:01.5320560Z ##[debug]=> './_site'
+2025-09-26T11:02:01.5320781Z ##[debug]Result: './_site'
+2025-09-26T11:02:01.5321196Z ##[debug]Evaluating condition for step: 'run'
+2025-09-26T11:02:01.5322968Z ##[debug]Evaluating: (success() && (runner.os == 'Linux'))
+2025-09-26T11:02:01.5323381Z ##[debug]Evaluating And:
+2025-09-26T11:02:01.5323682Z ##[debug]..Evaluating success:
+2025-09-26T11:02:01.5324347Z ##[debug]..=> true
+2025-09-26T11:02:01.5324645Z ##[debug]..Evaluating Equal:
+2025-09-26T11:02:01.5324957Z ##[debug]....Evaluating Index:
+2025-09-26T11:02:01.5325255Z ##[debug]......Evaluating runner:
+2025-09-26T11:02:01.5325553Z ##[debug]......=> Object
+2025-09-26T11:02:01.5325853Z ##[debug]......Evaluating String:
+2025-09-26T11:02:01.5326145Z ##[debug]......=> 'os'
+2025-09-26T11:02:01.5326487Z ##[debug]....=> 'Linux'
+2025-09-26T11:02:01.5326769Z ##[debug]....Evaluating String:
+2025-09-26T11:02:01.5327120Z ##[debug]....=> 'Linux'
+2025-09-26T11:02:01.5327367Z ##[debug]..=> true
+2025-09-26T11:02:01.5327616Z ##[debug]=> true
+2025-09-26T11:02:01.5328014Z ##[debug]Expanded: (true && ('Linux' == 'Linux'))
+2025-09-26T11:02:01.5328677Z ##[debug]Result: true
+2025-09-26T11:02:01.5336313Z ##[debug]Starting: run
+2025-09-26T11:02:01.5343089Z ##[debug]Loading inputs
+2025-09-26T11:02:01.5343850Z ##[debug]Loading env
+2025-09-26T11:02:01.5347140Z ##[group]Run echo ::group::Archive artifact
+2025-09-26T11:02:01.5347448Z [36;1mecho ::group::Archive artifact[0m
+2025-09-26T11:02:01.5347686Z [36;1mtar \[0m
+2025-09-26T11:02:01.5347904Z [36;1m  --dereference --hard-dereference \[0m
+2025-09-26T11:02:01.5348175Z [36;1m  --directory "$INPUT_PATH" \[0m
+2025-09-26T11:02:01.5348612Z [36;1m  -cvf "$RUNNER_TEMP/artifact.tar" \[0m
+2025-09-26T11:02:01.5348871Z [36;1m  --exclude=.git \[0m
+2025-09-26T11:02:01.5349080Z [36;1m  --exclude=.github \[0m
+2025-09-26T11:02:01.5349293Z [36;1m  .[0m
+2025-09-26T11:02:01.5349464Z [36;1mecho ::endgroup::[0m
+2025-09-26T11:02:01.6450205Z shell: /usr/bin/sh -e {0}
+2025-09-26T11:02:01.6450497Z env:
+2025-09-26T11:02:01.6450704Z   GITHUB_PAGES: true
+2025-09-26T11:02:01.6450968Z   INPUT_PATH: ./_site
+2025-09-26T11:02:01.6451203Z ##[endgroup]
+2025-09-26T11:02:01.6505455Z ##[debug]/usr/bin/sh -e /home/runner/work/_temp/adf97d2d-d5f4-4585-b89d-6ee17e10e76d.sh
+2025-09-26T11:02:01.6521758Z ::group::Archive artifact
+2025-09-26T11:02:01.6522208Z ##[group]Archive artifact
+2025-09-26T11:02:01.6534451Z ./
+2025-09-26T11:02:01.6537216Z ./styles/
+2025-09-26T11:02:01.6537575Z ./styles/main.css
+2025-09-26T11:02:01.6538506Z ::endgroup::
+2025-09-26T11:02:01.6538794Z ##[endgroup]
+2025-09-26T11:02:01.6543690Z ##[debug]Finished: run
+2025-09-26T11:02:01.6569772Z ##[debug]Evaluating: inputs.path
+2025-09-26T11:02:01.6570104Z ##[debug]Evaluating Index:
+2025-09-26T11:02:01.6570361Z ##[debug]..Evaluating inputs:
+2025-09-26T11:02:01.6570633Z ##[debug]..=> Object
+2025-09-26T11:02:01.6571109Z ##[debug]..Evaluating String:
+2025-09-26T11:02:01.6571403Z ##[debug]..=> 'path'
+2025-09-26T11:02:01.6571651Z ##[debug]=> './_site'
+2025-09-26T11:02:01.6571857Z ##[debug]Result: './_site'
+2025-09-26T11:02:01.6572410Z ##[debug]Evaluating condition for step: 'run'
+2025-09-26T11:02:01.6573767Z ##[debug]Evaluating: (success() && (runner.os == 'macOS'))
+2025-09-26T11:02:01.6574180Z ##[debug]Evaluating And:
+2025-09-26T11:02:01.6574475Z ##[debug]..Evaluating success:
+2025-09-26T11:02:01.6574869Z ##[debug]..=> true
+2025-09-26T11:02:01.6575153Z ##[debug]..Evaluating Equal:
+2025-09-26T11:02:01.6575438Z ##[debug]....Evaluating Index:
+2025-09-26T11:02:01.6575728Z ##[debug]......Evaluating runner:
+2025-09-26T11:02:01.6576020Z ##[debug]......=> Object
+2025-09-26T11:02:01.6576307Z ##[debug]......Evaluating String:
+2025-09-26T11:02:01.6576589Z ##[debug]......=> 'os'
+2025-09-26T11:02:01.6576926Z ##[debug]....=> 'Linux'
+2025-09-26T11:02:01.6577204Z ##[debug]....Evaluating String:
+2025-09-26T11:02:01.6577491Z ##[debug]....=> 'macOS'
+2025-09-26T11:02:01.6577746Z ##[debug]..=> false
+2025-09-26T11:02:01.6577989Z ##[debug]=> false
+2025-09-26T11:02:01.6578631Z ##[debug]Expanded: (true && ('Linux' == 'macOS'))
+2025-09-26T11:02:01.6579012Z ##[debug]Result: false
+2025-09-26T11:02:01.6581580Z ##[debug]Evaluating: inputs.path
+2025-09-26T11:02:01.6581853Z ##[debug]Evaluating Index:
+2025-09-26T11:02:01.6582076Z ##[debug]..Evaluating inputs:
+2025-09-26T11:02:01.6582316Z ##[debug]..=> Object
+2025-09-26T11:02:01.6582528Z ##[debug]..Evaluating String:
+2025-09-26T11:02:01.6582753Z ##[debug]..=> 'path'
+2025-09-26T11:02:01.6582976Z ##[debug]=> './_site'
+2025-09-26T11:02:01.6583175Z ##[debug]Result: './_site'
+2025-09-26T11:02:01.6583533Z ##[debug]Evaluating condition for step: 'run'
+2025-09-26T11:02:01.6584555Z ##[debug]Evaluating: (success() && (runner.os == 'Windows'))
+2025-09-26T11:02:01.6584938Z ##[debug]Evaluating And:
+2025-09-26T11:02:01.6585226Z ##[debug]..Evaluating success:
+2025-09-26T11:02:01.6585546Z ##[debug]..=> true
+2025-09-26T11:02:01.6585813Z ##[debug]..Evaluating Equal:
+2025-09-26T11:02:01.6586095Z ##[debug]....Evaluating Index:
+2025-09-26T11:02:01.6586384Z ##[debug]......Evaluating runner:
+2025-09-26T11:02:01.6586683Z ##[debug]......=> Object
+2025-09-26T11:02:01.6586964Z ##[debug]......Evaluating String:
+2025-09-26T11:02:01.6587244Z ##[debug]......=> 'os'
+2025-09-26T11:02:01.6587513Z ##[debug]....=> 'Linux'
+2025-09-26T11:02:01.6587779Z ##[debug]....Evaluating String:
+2025-09-26T11:02:01.6588048Z ##[debug]....=> 'Windows'
+2025-09-26T11:02:01.6588520Z ##[debug]..=> false
+2025-09-26T11:02:01.6588794Z ##[debug]=> false
+2025-09-26T11:02:01.6589233Z ##[debug]Expanded: (true && ('Linux' == 'Windows'))
+2025-09-26T11:02:01.6589602Z ##[debug]Result: false
+2025-09-26T11:02:01.6590751Z ##[debug]Evaluating condition for step: 'run'
+2025-09-26T11:02:01.6591530Z ##[debug]Evaluating: success()
+2025-09-26T11:02:01.6591842Z ##[debug]Evaluating success:
+2025-09-26T11:02:01.6592151Z ##[debug]=> true
+2025-09-26T11:02:01.6592446Z ##[debug]Result: true
+2025-09-26T11:02:01.6592821Z ##[debug]Starting: run
+2025-09-26T11:02:01.6620380Z ##[debug]Loading inputs
+2025-09-26T11:02:01.6621303Z ##[debug]Evaluating: inputs.name
+2025-09-26T11:02:01.6621564Z ##[debug]Evaluating Index:
+2025-09-26T11:02:01.6621804Z ##[debug]..Evaluating inputs:
+2025-09-26T11:02:01.6622039Z ##[debug]..=> Object
+2025-09-26T11:02:01.6622252Z ##[debug]..Evaluating String:
+2025-09-26T11:02:01.6622466Z ##[debug]..=> 'name'
+2025-09-26T11:02:01.6622706Z ##[debug]=> 'github-pages'
+2025-09-26T11:02:01.6622935Z ##[debug]Result: 'github-pages'
+2025-09-26T11:02:01.6624683Z ##[debug]Evaluating: format('{0}/artifact.tar', runner.temp)
+2025-09-26T11:02:01.6625029Z ##[debug]Evaluating format:
+2025-09-26T11:02:01.6628877Z ##[debug]..Evaluating String:
+2025-09-26T11:02:01.6629174Z ##[debug]..=> '{0}/artifact.tar'
+2025-09-26T11:02:01.6641464Z ##[debug]..Evaluating Index:
+2025-09-26T11:02:01.6641728Z ##[debug]....Evaluating runner:
+2025-09-26T11:02:01.6641994Z ##[debug]....=> Object
+2025-09-26T11:02:01.6642441Z ##[debug]....Evaluating String:
+2025-09-26T11:02:01.6642699Z ##[debug]....=> 'temp'
+2025-09-26T11:02:01.6642946Z ##[debug]..=> '/home/runner/work/_temp'
+2025-09-26T11:02:01.6643944Z ##[debug]=> '/home/runner/work/_temp/artifact.tar'
+2025-09-26T11:02:01.6644471Z ##[debug]Result: '/home/runner/work/_temp/artifact.tar'
+2025-09-26T11:02:01.6645207Z ##[debug]Evaluating: inputs.retention-days
+2025-09-26T11:02:01.6645496Z ##[debug]Evaluating Index:
+2025-09-26T11:02:01.6645723Z ##[debug]..Evaluating inputs:
+2025-09-26T11:02:01.6645954Z ##[debug]..=> Object
+2025-09-26T11:02:01.6646162Z ##[debug]..Evaluating String:
+2025-09-26T11:02:01.6646382Z ##[debug]..=> 'retention-days'
+2025-09-26T11:02:01.6646615Z ##[debug]=> '1'
+2025-09-26T11:02:01.6646807Z ##[debug]Result: '1'
+2025-09-26T11:02:01.6649199Z ##[debug]Loading env
+2025-09-26T11:02:01.6652873Z ##[group]Run actions/upload-artifact@v4
+2025-09-26T11:02:01.6653111Z with:
+2025-09-26T11:02:01.6653269Z   name: github-pages
+2025-09-26T11:02:01.6653496Z   path: /home/runner/work/_temp/artifact.tar
+2025-09-26T11:02:01.6653743Z   retention-days: 1
+2025-09-26T11:02:01.6653939Z   if-no-files-found: error
+2025-09-26T11:02:01.6654139Z   compression-level: 6
+2025-09-26T11:02:01.6654331Z   overwrite: false
+2025-09-26T11:02:01.6654509Z   include-hidden-files: false
+2025-09-26T11:02:01.6654714Z env:
+2025-09-26T11:02:01.6654864Z   GITHUB_PAGES: true
+2025-09-26T11:02:01.6655047Z ##[endgroup]
+2025-09-26T11:02:01.8718214Z ##[debug]followSymbolicLinks 'true'
+2025-09-26T11:02:01.8719845Z ##[debug]implicitDescendants 'true'
+2025-09-26T11:02:01.8720522Z ##[debug]omitBrokenSymbolicLinks 'true'
+2025-09-26T11:02:01.8721198Z ##[debug]excludeHiddenFiles 'true'
+2025-09-26T11:02:01.8743233Z ##[debug]followSymbolicLinks 'true'
+2025-09-26T11:02:01.8744522Z ##[debug]implicitDescendants 'true'
+2025-09-26T11:02:01.8746481Z ##[debug]matchDirectories 'true'
+2025-09-26T11:02:01.8747329Z ##[debug]omitBrokenSymbolicLinks 'true'
+2025-09-26T11:02:01.8748055Z ##[debug]excludeHiddenFiles 'true'
+2025-09-26T11:02:01.8749164Z ##[debug]Search path '/home/runner/work/_temp/artifact.tar'
+2025-09-26T11:02:01.8781745Z ##[debug]File:/home/runner/work/_temp/artifact.tar was found using the provided searchPath
+2025-09-26T11:02:01.8782918Z With the provided path, there will be 1 file uploaded
+2025-09-26T11:02:01.8783866Z ##[debug]Root artifact directory is /home/runner/work/_temp
+2025-09-26T11:02:01.8787893Z Artifact name is valid!
+2025-09-26T11:02:01.8789315Z Root directory input is valid!
+2025-09-26T11:02:01.8809452Z ##[debug]Workflow Run Backend ID: c18036a7-2efa-42cb-aecd-802808faa507
+2025-09-26T11:02:01.8810724Z ##[debug]Workflow Job Run Backend ID: 65faafd5-fc59-5081-b5fd-23797d6b11e6
+2025-09-26T11:02:01.8825934Z ##[debug][Request] CreateArtifact https://results-receiver.actions.githubusercontent.com/twirp/github.actions.results.api.v1.ArtifactService/CreateArtifact
+2025-09-26T11:02:02.1598823Z ##[debug][Response] - 200
+2025-09-26T11:02:02.1601297Z ##[debug]Headers: {
+2025-09-26T11:02:02.1601544Z ##[debug]  "content-length": "582",
+2025-09-26T11:02:02.1601842Z ##[debug]  "content-type": "application/json",
+2025-09-26T11:02:02.1602159Z ##[debug]  "date": "Fri, 26 Sep 2025 11:02:02 GMT",
+2025-09-26T11:02:02.1602466Z ##[debug]  "x-github-backend": "Kubernetes",
+2025-09-26T11:02:02.1602834Z ##[debug]  "x-github-request-id": "C7C0:411A5:1552DAD:19E2497:68D672AA"
+2025-09-26T11:02:02.1603318Z ##[debug]}
+2025-09-26T11:02:02.1604167Z ::add-mask::***
+2025-09-26T11:02:02.1605845Z ::add-mask::***
+2025-09-26T11:02:02.1606484Z ##[debug]Body: {
+2025-09-26T11:02:02.1606684Z ##[debug]  "ok": true,
+2025-09-26T11:02:02.1609844Z ##[debug]  "signed_upload_url": "https://productionresultssa7.blob.core.windows.net/actions-results/c18036a7-2efa-42cb-aecd-802808faa507/workflow-job-run-65faafd5-fc59-5081-b5fd-23797d6b11e6/artifacts/afa28766d3caf497f6ad369ac6c5505dd8db6689a300a79784c20dcaaf97018f.zip?se=2025-09-26T12%3A02%3A02Z&sig=***&ske=2025-09-26T22%3A27%3A59Z&skoid=ca7593d4-ee42-46cd-af88-8b886a2f84eb&sks=b&skt=2025-09-26T10%3A27%3A59Z&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skv=2025-11-05&sp=cw&spr=https&sr=b&st=2025-09-26T11%3A01%3A57Z&sv=2025-11-05"
+2025-09-26T11:02:02.1612294Z ##[debug]}
+2025-09-26T11:02:02.1612968Z ##[debug]Creating Artifact archive with compressionLevel: 6
+2025-09-26T11:02:02.1633958Z ##[debug]Zip write high watermark value 8388608
+2025-09-26T11:02:02.1634701Z ##[debug]Zip read high watermark value 8388608
+2025-09-26T11:02:02.1681468Z ##[debug]Uploading artifact zip to blob storage with maxConcurrency: 5, bufferSize: 8388608
+2025-09-26T11:02:02.1690951Z Beginning upload of artifact content to blob storage
+2025-09-26T11:02:02.1816260Z ##[debug]Zip stream for upload has ended.
+2025-09-26T11:02:02.1818884Z ##[debug]Zip stream for upload has finished.
+2025-09-26T11:02:02.4587945Z Uploaded bytes 316
+2025-09-26T11:02:02.5288424Z Finished uploading artifact content to blob storage!
+2025-09-26T11:02:02.5291419Z SHA256 digest of uploaded artifact zip is 8b021a0528f8a9ab307dfaac2c6672bc6010198edadbcc4db9a0213c1d1586aa
+2025-09-26T11:02:02.5292934Z Finalizing artifact upload
+2025-09-26T11:02:02.5296130Z ##[debug][Request] FinalizeArtifact https://results-receiver.actions.githubusercontent.com/twirp/github.actions.results.api.v1.ArtifactService/FinalizeArtifact
+2025-09-26T11:02:02.6832274Z ##[debug][Response] - 200
+2025-09-26T11:02:02.6832914Z ##[debug]Headers: {
+2025-09-26T11:02:02.6833131Z ##[debug]  "content-length": "39",
+2025-09-26T11:02:02.6833414Z ##[debug]  "content-type": "application/json",
+2025-09-26T11:02:02.6833715Z ##[debug]  "date": "Fri, 26 Sep 2025 11:02:02 GMT",
+2025-09-26T11:02:02.6834142Z ##[debug]  "x-github-backend": "Kubernetes",
+2025-09-26T11:02:02.6834697Z ##[debug]  "x-github-request-id": "C7C0:411A5:1552F00:19E265B:68D672AA"
+2025-09-26T11:02:02.6835208Z ##[debug]}
+2025-09-26T11:02:02.6835706Z ##[debug]Body: {
+2025-09-26T11:02:02.6835997Z ##[debug]  "ok": true,
+2025-09-26T11:02:02.6836337Z ##[debug]  "artifact_id": "4114196422"
+2025-09-26T11:02:02.6836718Z ##[debug]}
+2025-09-26T11:02:02.6837478Z Artifact github-pages.zip successfully finalized. Artifact ID 4114196422
+2025-09-26T11:02:02.6838527Z Artifact github-pages has been successfully uploaded! Final size is 316 bytes. Artifact ID is 4114196422
+2025-09-26T11:02:02.6842931Z Artifact download URL: https://github.com/meu9067/meu9067.github.io/actions/runs/18035447671/artifacts/4114196422
+2025-09-26T11:02:02.6913047Z ##[debug]Node Action run completed with exit code 0
+2025-09-26T11:02:02.6915270Z ##[debug]Set output artifact-id = 4114196422
+2025-09-26T11:02:02.6915765Z ##[debug]Set output artifact-digest = 8b021a0528f8a9ab307dfaac2c6672bc6010198edadbcc4db9a0213c1d1586aa
+2025-09-26T11:02:02.6916494Z ##[debug]Set output artifact-url = https://github.com/meu9067/meu9067.github.io/actions/runs/18035447671/artifacts/4114196422
+2025-09-26T11:02:02.6917334Z ##[debug]Finished: run
+2025-09-26T11:02:02.6930743Z ##[debug]Evaluating: steps.upload-artifact.outputs.artifact-id
+2025-09-26T11:02:02.6931162Z ##[debug]Evaluating Index:
+2025-09-26T11:02:02.6931413Z ##[debug]..Evaluating Index:
+2025-09-26T11:02:02.6931645Z ##[debug]....Evaluating Index:
+2025-09-26T11:02:02.6931871Z ##[debug]......Evaluating steps:
+2025-09-26T11:02:02.6932145Z ##[debug]......=> Object
+2025-09-26T11:02:02.6932385Z ##[debug]......Evaluating String:
+2025-09-26T11:02:02.6932638Z ##[debug]......=> 'upload-artifact'
+2025-09-26T11:02:02.6932943Z ##[debug]....=> Object
+2025-09-26T11:02:02.6933150Z ##[debug]....Evaluating String:
+2025-09-26T11:02:02.6933378Z ##[debug]....=> 'outputs'
+2025-09-26T11:02:02.6933589Z ##[debug]..=> Object
+2025-09-26T11:02:02.6933788Z ##[debug]..Evaluating String:
+2025-09-26T11:02:02.6934019Z ##[debug]..=> 'artifact-id'
+2025-09-26T11:02:02.6934238Z ##[debug]=> '4114196422'
+2025-09-26T11:02:02.6934467Z ##[debug]Result: '4114196422'
+2025-09-26T11:02:02.6941765Z ##[debug]Finishing: Upload artifact
+2025-09-26T11:02:02.6949064Z ##[debug]Evaluating condition for step: 'Post Install Node.js'
+2025-09-26T11:02:02.6950298Z ##[debug]Evaluating: success()
+2025-09-26T11:02:02.6950640Z ##[debug]Evaluating success:
+2025-09-26T11:02:02.6950974Z ##[debug]=> true
+2025-09-26T11:02:02.6951281Z ##[debug]Result: true
+2025-09-26T11:02:02.6951732Z ##[debug]Starting: Post Install Node.js
+2025-09-26T11:02:02.6971947Z ##[debug]Loading inputs
+2025-09-26T11:02:02.6975479Z ##[debug]Evaluating: (((github.server_url == 'https://github.com') && github.token) || '')
+2025-09-26T11:02:02.6975932Z ##[debug]Evaluating Or:
+2025-09-26T11:02:02.6976162Z ##[debug]..Evaluating And:
+2025-09-26T11:02:02.6976388Z ##[debug]....Evaluating Equal:
+2025-09-26T11:02:02.6976617Z ##[debug]......Evaluating Index:
+2025-09-26T11:02:02.6976851Z ##[debug]........Evaluating github:
+2025-09-26T11:02:02.6977117Z ##[debug]........=> Object
+2025-09-26T11:02:02.6977340Z ##[debug]........Evaluating String:
+2025-09-26T11:02:02.6977618Z ##[debug]........=> 'server_url'
+2025-09-26T11:02:02.6977895Z ##[debug]......=> 'https://github.com'
+2025-09-26T11:02:02.6978153Z ##[debug]......Evaluating String:
+2025-09-26T11:02:02.6978612Z ##[debug]......=> 'https://github.com'
+2025-09-26T11:02:02.6978860Z ##[debug]....=> true
+2025-09-26T11:02:02.6979068Z ##[debug]....Evaluating Index:
+2025-09-26T11:02:02.6979286Z ##[debug]......Evaluating github:
+2025-09-26T11:02:02.6979516Z ##[debug]......=> Object
+2025-09-26T11:02:02.6979756Z ##[debug]......Evaluating String:
+2025-09-26T11:02:02.6979985Z ##[debug]......=> 'token'
+2025-09-26T11:02:02.6980360Z ##[debug]....=> '***'
+2025-09-26T11:02:02.6980658Z ##[debug]..=> '***'
+2025-09-26T11:02:02.6980918Z ##[debug]=> '***'
+2025-09-26T11:02:02.6981403Z ##[debug]Expanded: ((('https://github.com' == 'https://github.com') && '***') || '')
+2025-09-26T11:02:02.6981850Z ##[debug]Result: '***'
+2025-09-26T11:02:02.6983660Z ##[debug]Loading env
+2025-09-26T11:02:02.6987408Z Post job cleanup.
+2025-09-26T11:02:02.8483774Z ##[debug]Caching for '' is not supported
+2025-09-26T11:02:02.8548748Z ##[debug]Node Action run completed with exit code 0
+2025-09-26T11:02:02.8550867Z ##[debug]Finishing: Post Install Node.js
+2025-09-26T11:02:02.8556758Z ##[debug]Evaluating condition for step: 'Post Checkout'
+2025-09-26T11:02:02.8559884Z ##[debug]Evaluating: always()
+2025-09-26T11:02:02.8560236Z ##[debug]Evaluating always:
+2025-09-26T11:02:02.8561301Z ##[debug]=> true
+2025-09-26T11:02:02.8561669Z ##[debug]Result: true
+2025-09-26T11:02:02.8562158Z ##[debug]Starting: Post Checkout
+2025-09-26T11:02:02.8586241Z ##[debug]Loading inputs
+2025-09-26T11:02:02.8587266Z ##[debug]Evaluating: github.repository
+2025-09-26T11:02:02.8587541Z ##[debug]Evaluating Index:
+2025-09-26T11:02:02.8587770Z ##[debug]..Evaluating github:
+2025-09-26T11:02:02.8588029Z ##[debug]..=> Object
+2025-09-26T11:02:02.8588437Z ##[debug]..Evaluating String:
+2025-09-26T11:02:02.8588818Z ##[debug]..=> 'repository'
+2025-09-26T11:02:02.8589119Z ##[debug]=> 'meu9067/meu9067.github.io'
+2025-09-26T11:02:02.8589408Z ##[debug]Result: 'meu9067/meu9067.github.io'
+2025-09-26T11:02:02.8590672Z ##[debug]Evaluating: github.token
+2025-09-26T11:02:02.8590932Z ##[debug]Evaluating Index:
+2025-09-26T11:02:02.8591179Z ##[debug]..Evaluating github:
+2025-09-26T11:02:02.8591404Z ##[debug]..=> Object
+2025-09-26T11:02:02.8591610Z ##[debug]..Evaluating String:
+2025-09-26T11:02:02.8591822Z ##[debug]..=> 'token'
+2025-09-26T11:02:02.8592215Z ##[debug]=> '***'
+2025-09-26T11:02:02.8592516Z ##[debug]Result: '***'
+2025-09-26T11:02:02.8599441Z ##[debug]Loading env
+2025-09-26T11:02:02.8603041Z Post job cleanup.
+2025-09-26T11:02:02.9507362Z ##[debug]Getting git version
+2025-09-26T11:02:02.9522172Z [command]/usr/bin/git version
+2025-09-26T11:02:02.9557732Z git version 2.51.0
+2025-09-26T11:02:02.9580228Z ##[debug]0
+2025-09-26T11:02:02.9580783Z ##[debug]git version 2.51.0
+2025-09-26T11:02:02.9581119Z ##[debug]
+2025-09-26T11:02:02.9581916Z ##[debug]Set git useragent to: git/2.51.0 (github-actions-checkout)
+2025-09-26T11:02:02.9585089Z ::add-mask::***
+2025-09-26T11:02:02.9599721Z Temporarily overriding HOME='/home/runner/work/_temp/257c692e-b78f-4088-b941-461ffdcd9a84' before making global git config changes
+2025-09-26T11:02:02.9600700Z Adding repository directory to the temporary git global config as a safe directory
+2025-09-26T11:02:02.9605158Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/meu9067.github.io/meu9067.github.io
+2025-09-26T11:02:02.9631777Z ##[debug]0
+2025-09-26T11:02:02.9632271Z ##[debug]
+2025-09-26T11:02:02.9638890Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-09-26T11:02:02.9663916Z ##[debug]1
+2025-09-26T11:02:02.9664408Z ##[debug]
+2025-09-26T11:02:02.9669787Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-09-26T11:02:02.9885407Z ##[debug]0
+2025-09-26T11:02:02.9886441Z ##[debug]
+2025-09-26T11:02:02.9892814Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-09-26T11:02:02.9912707Z http.https://github.com/.extraheader
+2025-09-26T11:02:02.9919369Z ##[debug]0
+2025-09-26T11:02:02.9920032Z ##[debug]http.https://github.com/.extraheader
+2025-09-26T11:02:02.9920520Z ##[debug]
+2025-09-26T11:02:02.9925922Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-09-26T11:02:02.9950789Z ##[debug]0
+2025-09-26T11:02:02.9951353Z ##[debug]
+2025-09-26T11:02:02.9956886Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-09-26T11:02:03.0169579Z ##[debug]0
+2025-09-26T11:02:03.0170154Z ##[debug]
+2025-09-26T11:02:03.0170824Z ##[debug]Unsetting HOME override
+2025-09-26T11:02:03.0233118Z ##[debug]Node Action run completed with exit code 0
+2025-09-26T11:02:03.0235247Z ##[debug]Finishing: Post Checkout
+2025-09-26T11:02:03.0274440Z ##[debug]Starting: Complete job
+2025-09-26T11:02:03.0276046Z Uploading runner diagnostic logs
+2025-09-26T11:02:03.0287001Z ##[debug]Starting diagnostic file upload.
+2025-09-26T11:02:03.0287325Z ##[debug]Setting up diagnostic log folders.
+2025-09-26T11:02:03.0289327Z ##[debug]Creating diagnostic log files folder.
+2025-09-26T11:02:03.0297372Z ##[debug]Copying 1 worker diagnostic logs.
+2025-09-26T11:02:03.0306142Z ##[debug]Copying 1 runner diagnostic logs.
+2025-09-26T11:02:03.0307171Z ##[debug]Zipping diagnostic files.
+2025-09-26T11:02:03.0388878Z ##[debug]Uploading diagnostic metadata file.
+2025-09-26T11:02:03.0417431Z ##[debug]Diagnostic file upload complete.
+2025-09-26T11:02:03.0417928Z Completed runner diagnostic log upload
+2025-09-26T11:02:03.0418195Z Cleaning up orphan processes
+2025-09-26T11:02:03.0682398Z ##[debug]Finishing: Complete job
+2025-09-26T11:02:03.0710808Z ##[debug]Finishing: build
