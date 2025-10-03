@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "npx @11ty/eleventy --formats=html,md,scss",
+    "build": "npx  @11ty/eleventy && npx  @11ty/eleventy --formats=scss",
     "serve": "npx @11ty/eleventy --formats=html,md,scss --serve",
     "debug": "DEBUG=* npx  @11ty/eleventy",
     "test": "jest"
